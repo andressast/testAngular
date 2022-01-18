@@ -1,5 +1,4 @@
-import { NoticiasService } from './../shared/noticias.service';
-import { HttpClient } from '@angular/common/http';
+import { NoticiasService } from '../noticia-service/noticias.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './noticia-cards.component.html',
   styleUrls: ['./noticia-cards.component.css']
 })
+
 export class NoticiaCardsComponent implements OnInit {
 
   noticias = []
   constructor (private noticiasService: NoticiasService){
-    
   }
   
   ngOnInit(): void {

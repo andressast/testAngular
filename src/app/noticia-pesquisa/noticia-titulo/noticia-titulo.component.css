@@ -5,13 +5,33 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-:root {
-  --primary-color: #424242;
-  --secondary-color: #d1d1d1;
-  --tertiary-color: #1090C3;
+@media (min-width: 320px) {
+  .containerCards {
+    grid-template-columns: repeat(1, minmax(6rem, auto));
+    margin-bottom: 2rem;
+  }
 }
 
-/* tamanho de fonte dimensionado de acordo com janela */
+@media (min-width: 768px) {
+  .containerContent {
+    grid-template-columns: repeat(2, minmax(6rem, auto));
+  }
+
+  .containerCards {
+    grid-template-columns: repeat(1, minmax(6rem, auto));
+  }
+}
+
+@media (min-width: 992px) {
+  .containerContent {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .containerCards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 html {
   font-size: calc(60% + 0.8vmin);
 }
@@ -29,10 +49,11 @@ main {
   margin: 3rem 0;
   text-align: center;
   line-height: 1rem;
-  color: var(--primary-color);
+  color: #424242;
 }
 
 h1 {
   text-align: center;
   margin: 1.2rem;
+  font-size: calc(1em + 1vw);
 }

@@ -1,3 +1,5 @@
+import { NoticiasService } from './../shared/noticias.service';
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NoticiaCardsComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  noticias = []
+  constructor (private noticiasService: NoticiasService){
+    
   }
-
+  
+  ngOnInit(): void {
+    this.noticiasService.getNoticias()
+    .subscribe((data) => {
+      this.noticias = data;
+    })
+  }
 }
+  

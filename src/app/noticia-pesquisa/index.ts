@@ -1,1 +1,1 @@
-export * from './noticia-pesquisa.module';
+export * from './shared/noticia.service';

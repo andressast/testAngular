@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoticiaCardsComponent } from './noticia-pesquisa/noticia-cards';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { NoticiaCardsComponent } from './noticia-pesquisa/noticia-cards';
   imports: [
     BrowserModule, 
     AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],

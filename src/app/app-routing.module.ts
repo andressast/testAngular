@@ -1,18 +1,10 @@
 import { NgModule } from '@angular/core'; //pacote que usa o decorador 
 import { Routes, RouterModule } from '@angular/router';
-import { NoticiaRoutes } from './noticia-pesquisa/noticias-routing.module';
 
 //determinar que as minhas rotas terão o comportamento do objeto que estou importando 
 //coloco minhas rotas dentro dos colchetes
 //essas rotas que alteram o conteúdo da página, vou ter uma rota para cada página
-export const router : Routes = [
-  {
-        path: 'noticia-pesquisa',
-        redirectTo: 'noticia-pesquisa',
-        pathMatch:'full'  //redireciona direto pra pasta raiz
-    }, 
-    ...NoticiaRoutes  //faz um merge das rotas de tarefas-routing.module aqui
-];
+export const router : Routes = [];
 
 //usar decorador para fazer com que o app.module seja considerado um módulo: 
 @NgModule ({ 
